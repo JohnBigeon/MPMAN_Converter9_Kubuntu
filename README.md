@@ -13,7 +13,7 @@ keyboard
 ## Install Kubuntu 20.04 lts
 
 ### BOOT
-Create a boot with Rufus (Windows) of your favorite flavor of Ubuntu, here KUbuntu 20.04 lts
+Create a boot with Rufus (Windows) of your favorite flavour of Ubuntu, here KUbuntu 20.04 lts
 
 ### BIOS & EFI
 
