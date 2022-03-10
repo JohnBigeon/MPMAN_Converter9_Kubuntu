@@ -32,13 +32,23 @@ In order to access BIOS, you must press the BIOS key (*DEL*) during the boot-up 
 Finally, in **Save & Exit**, select *UEFI: USB DISK* to boot with your USB.
 
 ### Installation
-During the installation, an internet connection is required to update packages.
-The Wifi card should be well recognized.
+During the installation, an internet connection is required to update packages. The Wifi card should be well recognized.
+After the reboot, update your system:
+``
+sudo apt update
+sudo apt upgrade
+``
 
 ### Touchscreen
-To install the driver for the touchscreen, download the firmware file here: [https://github.com/onitake/gsl-firmware/tree/master/firmware/linux]. Then copy/paste as:
+To install the driver for the touchscreen, download the firmware file here: [https://github.com/onitake/gsl-firmware/tree/master/firmware/linux] and place it in a folder named *silead*. Then copy/paste as:
 ``
 cp -pr silead /lib/firmware
+``
+or directly:
+``
+mkdir -p /lib/firmware/silead
+cd /lib/firmware/silead
+wget 'https://github.com/onitake/gsl-firmware/raw/master/firmware/linux/silead/gsXXX.fw'
 ``
 After a reboot, the touchscreen should be enable.
 
@@ -51,5 +61,5 @@ xinput_calibrator
 ##### Autorotation
 Working ?
 
-### Audio/Video
-Working ?
+### Audio
+Not yet.
