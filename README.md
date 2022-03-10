@@ -24,9 +24,10 @@ We need to modify the USB so that it will boot on a 32-bit UEFI only system.
 The directory **/EFI/BOOT/** needs to contain a *bootia32.efi*, here: [https://github.com/hirotakaster/baytail-bootia32.efi/blob/master/bootia32.efi].
 
 ### BIOS & EFI
+In order to access BIOS, you must press the BIOS key (*DEL*) during the boot-up process. Then, we need to change few parameters.
 - In **Security**/**Secure Boot** menu, disable *Secure Boot* and *Secure Boot Mode*.
 - In **Boot**, disable *Quiet Boot* and *Fast Boot*.
-- In **Advanced**/**OS/BOM Configuration**, Fix *ISP PCI Device Selection* to *ISP PCI Device as B0D3F0*.
+- In **Advanced**/**OS/BOM Configuration**, Fix *ISP PCI Device Selection* to *ISP PCI Device as B0D3F0*. (Optional ?)
 
 Finally, in **Save & Exit**, select *UEFI: USB DISK* to boot with your USB.
 
