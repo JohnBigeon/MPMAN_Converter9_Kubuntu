@@ -35,4 +35,24 @@ Finally, in **Save & Exit**, select *UEFI: USB DISK* to boot with your USB.
 During the installation, an internet connection is required to update packages.
 The Wifi card should be well recognized.
 
-### Fix touchscreen
+### Touchscreen
+To install the driver for the touchscreen, download the firmware file here: [https://github.com/onitake/gsl-firmware/tree/master/firmware/linux]. Then copy/paste as:
+``
+cp -pr silead /lib/firmware
+``
+After a reboot, the touchscreen should be enable.
+
+#### Calibration
+For calibration of your touchscreen, use the command:
+``
+xinput_calibrator
+``
+
+##### Autorotation
+Working ?
+
+### Audio/Video
+Working ?
+
+
+
