@@ -18,6 +18,23 @@ This tablet PC runs an Intel Core Atom Z3735F and has 2 GB of RAM.
 ### BOOT
 Create a boot with Rufus (Windows) of your favorite flavour of Ubuntu, here KUbuntu 20.04 LTS (kubuntu-20.04.4-desktop-amd64.iso).
 
+#### Terminal
+```
+lsblk
+```
+````
+sda           8:0    1   7,5G  0 disk 
+├─sda1        8:1    1   3,4G  0 part /media/XXXX
+├─sda2        8:2    1   4,2M  0 part 
+└─sda3        8:3    1   300K  0 part 
+
+````
+
+```
+sudo umount /dev/sda
+sudo dd bs=4M if=path/to/input.iso of=/dev/sda conv=fdatasync  status=progress
+```
+
 #### 32-bit UEFI system
 We need to modify the USB so that it will boot on a 32-bit UEFI only system.
 
