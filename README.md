@@ -156,7 +156,7 @@ Add the line:
 ````
 snd-intel-dspcfg dsp_driver=2
 ````
-and after a reboot, the sound is now working fine.
+and after a reboot, the sound is now working but not perfect.
 
 ### Install directly Kubuntu >20.04
 Error after the first reboot:
