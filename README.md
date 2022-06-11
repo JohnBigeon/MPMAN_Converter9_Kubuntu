@@ -105,7 +105,7 @@ out/evdev-rce
 ````
 ##### Autostart
 To launch the script automatically at the startup, follow the procedure described here [https://fmirkes.github.io/articles/20190827.html]:
-Copy in local and 
+Copy in local: 
 ````
 sudo cp 'out/evdev-rce' '/usr/local/bin/'
 sudo chmod +x '/usr/local/bin/evdev-rce'
