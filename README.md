@@ -55,6 +55,11 @@ Now, you have access from your computer with:
 ssh remote_username@aaa.bbb.ccc.dd
 ````
 
+### Virtual keyboard
+````
+sudo apt install onboard
+````
+
 ### Touchscreen
 To install the driver for the touchscreen, download the firmware file here: [https://github.com/onitake/gsl-firmware/tree/master/firmware/linux] and place it in a folder named *silead*. Then copy/paste as:
 ````
