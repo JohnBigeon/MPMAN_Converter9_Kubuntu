@@ -39,6 +39,22 @@ sudo apt update
 sudo apt upgrade
 ````
 
+#### Remote access
+For remote access from your computer to the Converter9.
+Open a terminal on the tablet, install openssh-server and determine the ip's address.
+````
+sudo apt install openssh-server
+ip addr show | grep "inet "
+````
+The output returns now the ip's address of the tablet:
+````
+inet aaa.bbb.ccc.dd/ee brd aaa.bbb.ccc.fff scope global dynamic noprefixroute wlo1
+````
+Now, you have access from your computer with:
+````
+ssh remote_username@aaa.bbb.ccc.dd
+````
+
 ### Touchscreen
 To install the driver for the touchscreen, download the firmware file here: [https://github.com/onitake/gsl-firmware/tree/master/firmware/linux] and place it in a folder named *silead*. Then copy/paste as:
 ````
