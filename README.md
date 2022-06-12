@@ -32,11 +32,16 @@ In order to access BIOS, you must press the BIOS key (*DEL*) during the boot-up 
 Finally, in **Save & Exit**, select *UEFI: USB DISK* to boot with your USB.
 
 ### Installation
-During the installation, an internet connection is required to update packages. The Wifi card should be well recognized.
+During the installation (entire disk), an internet connection is required to update packages. The Wifi card should be well recognized.
 After the reboot, update your system:
 ````
 sudo apt update
 sudo apt upgrade
+````
+
+### Upgrade to latest lts (22.04)
+````
+sodu do-release-upgrade -d
 ````
 
 #### Remote access
@@ -85,14 +90,17 @@ sudo apt install git
 sudo apt-get install build-essential
 sudo apt-get install libevdev-dev
 ````
-
+````
+cd Downloads
 git clone 'https://github.com/PeterCxy/evdev-right-click-emulation.git'
+````
 ````
 cd evdev-right-click-emulation
 make all
 ````
 In my case, this script returns an error about libraries:
 ````
+/usr/bin/ld: out/uinput.o: in function `uinput_initialize':
 uinput.c:(.text+0x1c): undefined reference to `libevdev_new'
 ````
 
@@ -102,7 +110,8 @@ nano Makefile
 ````
 ````
 CFLAGS := $(XFLAGS) $(LIBRARIES) $(INCLUDES) ==> CFLAGS := $(XFLAGS) $(INCLUDES)
-$(CC) $(CFLAGS) $^ -o $@ ==> $(CC) $(CFLAGS) $^ $(LIBRARIES) -o $@
+$(TARGET): $(OBJS)
+        $(CC) $(CFLAGS) $^ $(LIBRARIES) -o $@
 ````
 Now, you should be able to use the right click emulation via the command:
 ````
@@ -153,6 +162,8 @@ StartupNotify=false
 Not yet.
 
 ### Audio
+In my case, with the upgrade to the 22.04 lts, the sound was fine.
+If you decided to stay in 20.04 lts, the sound output needs to be fixed.
 As mentioned here in this excellent post [https://ianrenton.com/guides/install-linux-on-a-linx-1010b-tablet/], to fix the sound, you need to edit the alsa-base.conf file
 ````
 sudo nano /etc/modprobe.d/alsa-base.conf
