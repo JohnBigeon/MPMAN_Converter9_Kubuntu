@@ -83,7 +83,15 @@ For calibration of your touchscreen, use the command:
 ````
 xinput_calibrator
 ````
-#### Right click emulation
+#### Autorotation
+Simply install [https://github.com/donbowman/kde-auto-rotate]
+````
+cd Downloads
+git clone 'https://github.com/donbowman/kde-auto-rotate.git'
+cd kde-auto-rotate/
+./install
+````
+### Right click emulation
 Use the great package here [https://github.com/PeterCxy/evdev-right-click-emulation]:
 ````
 sudo apt install git
@@ -109,11 +117,11 @@ As mentioned here [https://github.com/PeterCxy/evdev-right-click-emulation/issue
 nano Makefile
 ````
 ````
-CFLAGS := $(XFLAGS) $(LIBRARIES) $(INCLUDES) ==> CFLAGS := $(XFLAGS) $(INCLUDES)
+CFLAGS := $(XFLAGS) $(INCLUDES)
 $(TARGET): $(OBJS)
         $(CC) $(CFLAGS) $^ $(LIBRARIES) -o $@
 ````
-Now, you should be able to use the right click emulation via the command:
+After a new 'make all', you should be able to use the right click emulation via the command:
 ````
 out/evdev-rce
 ````
@@ -158,14 +166,7 @@ Exec=env LONG_CLICK_INTERVAL=500 LONG_CLICK_FUZZ=50 /usr/local/bin/evdev-rce
 Terminal=false
 StartupNotify=false
 ````
-##### Autorotation
-Simply install [https://github.com/donbowman/kde-auto-rotate]
-````
-cd Downloads
-git clone 'https://github.com/donbowman/kde-auto-rotate.git'
-cd kde-auto-rotate/
-./install
-````
+
 With the 22.04 lts, the autoration is perfectly working. It was not the case with the 20.04 lts.
 
 ### Audio
