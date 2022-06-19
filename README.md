@@ -64,6 +64,7 @@ ssh remote_username@aaa.bbb.ccc.dd
 ````
 sudo apt install onboard
 ````
+The onboard package have nice options in setting, just try the best ones that match your usage.
 
 ### Touchscreen
 To install the driver for the touchscreen, download the firmware file here: [https://github.com/onitake/gsl-firmware/tree/master/firmware/linux] and place it in a folder named *silead*. Then copy/paste as:
