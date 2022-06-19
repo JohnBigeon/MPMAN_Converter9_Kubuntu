@@ -159,7 +159,14 @@ Terminal=false
 StartupNotify=false
 ````
 ##### Autorotation
-Not yet.
+Simply install [https://github.com/donbowman/kde-auto-rotate]
+````
+cd Downloads
+git clone 'https://github.com/donbowman/kde-auto-rotate.git'
+cd kde-auto-rotate/
+./install
+````
+With the 22.04 lts, the autoration is perfectly working. It was not the case with the 20.04 lts.
 
 ### Audio
 In my case, with the upgrade to the 22.04 lts, the sound was fine.
